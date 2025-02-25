@@ -4,6 +4,8 @@
 
 package com.mycompany.inventario;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author jairk
@@ -11,6 +13,9 @@ package com.mycompany.inventario;
 public class Inventario {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+          SwingUtilities.invokeLater(() -> {
+            InventarioFrame frame = new InventarioFrame();
+            frame.setVisible(true);
+        });
     }
 }
